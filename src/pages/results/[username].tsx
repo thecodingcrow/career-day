@@ -57,16 +57,6 @@ const Results = () => {
     );
   }, []);
 
-  console.log(
-    [1, 1, 1, 1, 1, 1, 1, 1].length,
-    Math.max(indexOfLatestEntry - 5, 0),
-    Math.min(indexOfLatestEntry + 6, [1, 1, 1, 1, 1, 1, 1, 1].length - 1),
-    [1, 1, 1, 1, 1, 1, 1, 1].slice(
-      Math.max(indexOfLatestEntry - 5, 0),
-      Math.min(indexOfLatestEntry + 6, [1, 1, 1, 1, 1, 1, 1, 1].length)
-    )
-  );
-
   return (
     <Layout>
       <div className="flex flex-col items-center">

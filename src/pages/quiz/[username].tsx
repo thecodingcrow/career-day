@@ -120,7 +120,8 @@ const Quiz = ({
                         onChange={(e) => setSelectedAnswer(e.target.value)}
                         checked={selectedAnswer === answerOptions[i]}
                       />
-                      {answerOptions[i]} {answer ?? ""}
+                      {answerOptions[i]}
+                      {")"} {answer ?? ""}
                     </label>
                   ))}
                 </fieldset>

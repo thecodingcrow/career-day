@@ -300,7 +300,7 @@ export function getServerSideProps() {
       question:
         "What is the command to recursively copy a directory and its contents in Linux?",
       possibleAnswers: ["cp", "mv", "rsync", "scp"],
-      correctAnswer: 2,
+      correctAnswer: 1,
     },
     {
       question:
@@ -363,16 +363,6 @@ export function getServerSideProps() {
     },
     {
       question: "What is an SQL injection?",
-      possibleAnswers: [
-        "A type of SQL query that returns all rows from a table",
-        "A way of extracting information from a database",
-        "An attack where malicious SQL code is inserted into a database query",
-        "A way of inserting data into a database",
-      ],
-      correctAnswer: 2,
-    },
-    {
-      question: "What is the difference between static and dynamic typing?",
       possibleAnswers: [
         "A type of SQL query that returns all rows from a table",
         "A way of extracting information from a database",
@@ -448,7 +438,7 @@ export function getServerSideProps() {
     },
     {
       question: "Which building in the HTL Spengergasse is the best?",
-      possibleAnswers: ["A", "B", "C", "D"],
+      possibleAnswers: ["D", "A", "C", "B"],
       correctAnswer: 2,
     },
     {

@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         </h1>
         <div className="flex flex-col">
           <label htmlFor="username" className="mb-1 self-start text-xs ">
-            Your Instagram username
+            username
           </label>
 
           <div className="flex gap-8">

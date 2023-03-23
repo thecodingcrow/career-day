@@ -84,7 +84,7 @@ const Results = () => {
                     <tr
                       key={timestamp.getTime()}
                       className={classnames(
-                        " odd:bg-cold-600 even:bg-cold-700",
+                        " odd:bg-cold-700 even:bg-cold-800",
                         timestamp.getTime() ===
                           timestampOfLatestEntry.getTime() &&
                           "!bg-primary-600 !text-cold-900"

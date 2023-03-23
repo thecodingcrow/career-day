@@ -1,13 +1,16 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 /* eslint-disable @typescript-eslint/restrict-plus-operands */
+import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useTimer } from "react-timer-hook";
 import { Layout } from "~/components/layout";
-import Image from "next/image";
-import Link from "next/link";
 
-const webQuestions = [
+const programmingQuestions: {
+  question: string;
+  possibleAnswers: [string, string, string, string];
+  correctAnswer: number;
+}[] = [
   {
     question: "What is the difference between 'var' and 'let' in JavaScript?",
     possibleAnswers: [
@@ -128,6 +131,106 @@ const webQuestions = [
     possibleAnswers: ["HTML", "CSS", "JavaScript", "Typescript"],
     correctAnswer: 2,
   },
+  {
+    question: "What does the `__init__` method do in Python classes?",
+    possibleAnswers: [
+      "It creates a new instance of the class.",
+      "It is used to define the properties of the class.",
+      "It initializes the class with default values.",
+      "It is used to define the methods of the class.",
+    ],
+    correctAnswer: 0,
+  },
+  {
+    question: "What is the command to remove a Docker container?",
+    possibleAnswers: ["docker ps", "docker rm", "docker rmi", "docker run"],
+    correctAnswer: 1,
+  },
+  {
+    question:
+      "What is the command to recursively copy a directory and its contents in Linux?",
+    possibleAnswers: ["cp", "mv", "rsync", "scp"],
+    correctAnswer: 2,
+  },
+  {
+    question:
+      "What happens after executing `sudo rm -rf --no-preserve-root /`?",
+    possibleAnswers: [
+      "The internet will deleted",
+      "Your computer overheats",
+      "All lights go out",
+      "Your dog jumps in front of a bus",
+    ],
+    correctAnswer: 2,
+  },
+  {
+    question:
+      "What is the keyboard shortcut to insert a hyperlink in Microsoft Word?",
+    possibleAnswers: ["Ctrl + K", "Ctrl + H", "Ctrl + I", "Ctrl + U"],
+    correctAnswer: 1,
+  },
+  {
+    question:
+      "What is the command to find all files in a directory modified in the last 24 hours?",
+    possibleAnswers: [
+      "find . -mtime 0",
+      "find . -mtime 1",
+      "find . -mtime -1",
+      "find . -mtime +1",
+    ],
+    correctAnswer: 1,
+  },
+  {
+    question: "What is a closure in programming?",
+    possibleAnswers: [
+      "A block of code that is executed when a function is called",
+      "A function that takes in a function as an argument",
+      "A function that returns another function",
+      "A variable that is defined outside of a function's scope",
+    ],
+    correctAnswer: 2,
+  },
+  {
+    question:
+      "What is the keyboard shortcut to insert a comment in Microsoft Word?",
+    possibleAnswers: [
+      "Ctrl + Alt + C",
+      "Ctrl + Shift + C",
+      "Ctrl + Shift + M",
+      "Ctrl + Alt + M",
+    ],
+    correctAnswer: 1,
+  },
+  {
+    question: "What is a stack overflow error?",
+    possibleAnswers: [
+      "An error that occurs when a program tries to allocate more memory than is available",
+      "An error that occurs when a program attempts to access an invalid memory address",
+      "An error that occurs when a program tries to read from a write-only file",
+      "An error that occurs when a program recurses too deeply and runs out of stack space",
+    ],
+    correctAnswer: 3,
+  },
+  {
+    question: "What is an SQL injection?",
+    possibleAnswers: [
+      "A type of SQL query that returns all rows from a table",
+      "A way of extracting information from a database",
+      "An attack where malicious SQL code is inserted into a database query",
+      "A way of inserting data into a database",
+    ],
+    correctAnswer: 2,
+  },
+  {
+    question: "What is the difference between static and dynamic typing?",
+    possibleAnswers: [
+      "A type of SQL query that returns all rows from a table",
+      "A way of extracting information from a database",
+      "An attack where malicious SQL code is inserted into a database query",
+      "A way of inserting data into a database",
+    ],
+    correctAnswer: 2,
+  },
 ];
 
 const leanCodersQuestions = [
@@ -136,11 +239,11 @@ const leanCodersQuestions = [
       "Which one of these principles is NOT one of the core values of LEAN-CODERS?",
     possibleAnswers: [
       "Continuous improvement",
+      "Perfectionism",
       "Respect for people",
       "Eliminate waste",
-      "Perfectionism",
     ],
-    correctAnswer: 3,
+    correctAnswer: 1,
   },
   {
     question: "Which of the following was never a customer of LEAN-CODERS?",
@@ -155,8 +258,8 @@ const leanCodersQuestions = [
   {
     question:
       "Which of these frameworks is NOT focused in the tech stack of LEAN-CODERS?",
-    possibleAnswers: ["Next.JS", "Angular", "Nest.JS", "Vue.JS"],
-    correctAnswer: 3,
+    possibleAnswers: ["Vue.JS", "Angular", "Nest.JS", "Next.JS"],
+    correctAnswer: 0,
   },
   {
     question: "Which of these companies does not exist?",
@@ -166,31 +269,66 @@ const leanCodersQuestions = [
   {
     question: "How many easter eggs are hidden on the lean-coders.at website?",
     possibleAnswers: ["10", "Easter eggs?", "0", "5"],
-    correctAnswer: -1,
+    correctAnswer: 3,
+  },
+  {
+    question: "Which of these terms is NOT printed on a LEAN-CODERS sticker?",
+    possibleAnswers: [
+      "Increasing bugs since 2015",
+      "The only mask I use is 255.255.255.255",
+      "Weed-ing out the bad code",
+      "Make code great again",
+    ],
+    correctAnswer: 1,
+  },
+  {
+    question: "In which of these countries is the second LEAN-CODERS office?",
+    possibleAnswers: ["Sweden", "Germany", "Netherlands", "Switzerland"],
+    correctAnswer: 3,
   },
 ];
 
 const spengergasseQuestions = [
   {
     question:
-      "How many students are (appr.) currently enrolled at the HTL Spengergasse?",
+      "How many students (appr.)  are currently enrolled at the HTL Spengergasse?",
     possibleAnswers: ["2600", "2550", "2800", "2100"],
     correctAnswer: 0,
   },
   {
-    question: "Which building is the coolest of all?",
+    question: "Which building in the HTL Spengergasse is the best?",
     possibleAnswers: ["A", "B", "C", "D"],
     correctAnswer: 2,
   },
   {
     question: "Which of the five years are allowed to attend the FIT?",
-    possibleAnswers: ["All ", "B", "C", "D"],
+    possibleAnswers: ["All ", "First to third", "Third to fifth", "None"],
     correctAnswer: 2,
+  },
+  {
+    question: "How many floors has the large elevator in the C building? ",
+    possibleAnswers: ["7 ", "4", "8", "5"],
+    correctAnswer: 3,
+  },
+  {
+    question: "Where is the secret toilet in the HTL Spengergasse?",
+    possibleAnswers: [
+      "Under the hall",
+      "Under the D building",
+      "Between the two gyms",
+      "On the attic",
+    ],
+    correctAnswer: 0,
+  },
+  {
+    question: "Which console does the portier play?",
+    possibleAnswers: ["PS5", "PS4", "Nintendo Switch", "XBOX One"],
+    correctAnswer: 1,
   },
 ];
 
 const questions = [
-  ...webQuestions,
+  ...programmingQuestions,
   ...leanCodersQuestions,
   ...spengergasseQuestions,
 ];
@@ -239,7 +377,7 @@ const Quiz = () => {
   };
 
   useEffect(() => {
-    // shuffleArray(questions);
+    shuffleArray(questions);
   }, []);
 
   return (
@@ -247,7 +385,7 @@ const Quiz = () => {
       <Layout>
         <div className="flex flex-col">
           <div className="min-h-[32vh] min-w-[60vw] rounded-xl border border-cold-800 bg-cold-900 px-6 pb-6 pt-4">
-            {!isRunning ? (
+            {!isRunning || index >= questions.length ? (
               <div className="mx-auto flex w-full flex-col items-center gap-5">
                 <Image
                   className="mt-3"

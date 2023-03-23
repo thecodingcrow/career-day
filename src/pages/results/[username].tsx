@@ -110,12 +110,12 @@ const Results = () => {
         </div>
 
         <div className="mt-8 flex w-full items-center justify-between">
-          <Link
+          {/* <Link
             className="rounded-xl border border-primary-700 bg-primary-800 px-5 py-3 text-xl text-cold-400 transition-colors duration-150 ease-in-out hover:bg-primary-600 hover:text-cold-300 active:bg-primary-700"
             href={"/quiz/" + currentUsername}
           >
             Restart
-          </Link>
+          </Link> */}
 
           <Link
             className="rounded-xl border border-cold-800 bg-cold-900 px-5 py-3 text-xl text-primary-600 transition-colors duration-150 ease-in-out hover:bg-cold-700 active:bg-cold-800"

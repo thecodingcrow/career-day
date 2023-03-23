@@ -403,7 +403,7 @@ export function getServerSideProps() {
     {
       question: "How many people are currently working at LEAN-CODERS?",
       possibleAnswers: ["40", "23", "29", "19"],
-      correctAnswer: 2,
+      correctAnswer: 0,
     },
     {
       question:

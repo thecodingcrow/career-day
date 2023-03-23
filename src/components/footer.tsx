@@ -1,7 +1,6 @@
-import React from "react";
-import { LogoLeanCodersFull } from "./logos/lc";
-import { LogoLeanForgeFull } from "./logos/lf";
-import { LogoLeanHiveFull } from "./logos/lh";
+import { LogoLeanCodersLight } from "./logos/light/lc";
+import { LogoLeanForgeLight } from "./logos/light/lf";
+import { LogoLeanHiveLight } from "./logos/light/lh";
 
 export const Footer = () => {
   return (
@@ -13,7 +12,7 @@ export const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <LogoLeanCodersFull />
+            <LogoLeanCodersLight />
           </a>
         </li>
         <li>
@@ -22,7 +21,7 @@ export const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <LogoLeanHiveFull />
+            <LogoLeanHiveLight />
           </a>
         </li>
         <li>
@@ -31,7 +30,7 @@ export const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <LogoLeanForgeFull />
+            <LogoLeanForgeLight />
           </a>
         </li>
       </ul>

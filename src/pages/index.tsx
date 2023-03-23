@@ -12,14 +12,10 @@ const Home: NextPage = () => {
   return (
     <>
       <Layout>
-        <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
-          Welcome to the{" "}
-          <span className="rounded-xl bg-gradient-to-bl from-[#e6e0eb] to-primary-100 p-2 text-t3Black">
-            Career Day
-          </span>
+        <h1 className="rounded-xl bg-gradient-to-bl from-primary-600 via-t3Black  bg-clip-text p-2 text-[100px] font-extrabold tracking-wide text-transparent">
+          LEAN-TRIVIA
         </h1>
-
-        <div className="mt-2 flex flex-col">
+        <div className="flex flex-col">
           <label htmlFor="username" className="mb-1 self-start text-xs ">
             Your Instagram username
           </label>
@@ -29,7 +25,7 @@ const Home: NextPage = () => {
               autoComplete="off"
               aria-autocomplete="none"
               id="username"
-              className="rounded-xl bg-tertiary pl-2 text-t3Black outline-none"
+              className="rounded-xl border border-tertiary bg-inverted pl-2 text-t3Black outline-none"
               type="text"
               onChange={(e) => setUsername(e.target.value)}
             />
@@ -37,7 +33,7 @@ const Home: NextPage = () => {
             <Link
               href={username !== "" ? "/quiz/" + username : ""}
               passHref
-              className="rounded-xl bg-primary-100 px-6 py-3 text-xl text-secondary-100 transition-colors duration-150 ease-in-out hover:bg-primary-200 active:bg-primary-300"
+              className="rounded-xl border border-primary-700 bg-primary-600 px-6 py-3 text-xl text-t3Black transition-colors duration-150 ease-in-out hover:bg-primary-500 active:bg-primary-400"
             >
               <h2>Start Quiz</h2>
             </Link>

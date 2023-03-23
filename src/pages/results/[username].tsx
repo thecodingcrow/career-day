@@ -57,6 +57,19 @@ const Results = () => {
     );
   }, []);
 
+  console.log(
+    indexOfLatestEntry,
+    Math.max(indexOfLatestEntry - 5, 0),
+    Math.min(indexOfLatestEntry + 6, allResults.length - 1),
+    allResults.slice(
+      Math.max(indexOfLatestEntry - 5, 0),
+      Math.min(
+        indexOfLatestEntry + 6,
+        allResults.length - 1 === 0 ? 1 : allResults.length - 1
+      )
+    )
+  );
+
   return (
     <Layout>
       <div className="flex flex-col items-center">
@@ -78,7 +91,10 @@ const Results = () => {
                 {allResults
                   .slice(
                     Math.max(indexOfLatestEntry - 5, 0),
-                    Math.min(indexOfLatestEntry + 6, allResults.length - 1)
+                    Math.min(
+                      indexOfLatestEntry + 6,
+                      allResults.length - 1 === 0 ? 1 : allResults.length - 1
+                    )
                   )
                   .map(({ score, timestamp, username, rank }, i) => (
                     <tr

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/no-misused-promises */
 /* eslint-disable @typescript-eslint/restrict-plus-operands */
 import Image from "next/image";
@@ -68,14 +69,14 @@ const Quiz = ({
           <div className="min-h-[32vh] min-w-[60vw] rounded-xl border border-cold-800 bg-cold-900 px-6 pb-6 pt-4">
             {!isRunning || index >= questions.length ? (
               <div className="mx-auto flex w-full flex-col items-center gap-5">
-                <Image
+                <img
                   className="mt-3"
                   src="/fast.jpg"
                   alt="That was fast"
                   loading="eager"
                   width={455}
                   height={238}
-                ></Image>
+                ></img>
 
                 <div className="flex items-center gap-6">
                   <span className="block">But how did you perfom?</span>

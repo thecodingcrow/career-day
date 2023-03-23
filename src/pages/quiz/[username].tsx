@@ -263,7 +263,7 @@ const Quiz = () => {
                   <form onSubmit={submitAnswers}>
                     <button
                       type="submit"
-                      className="rounded-md text-primary-100 no-underline transition-colors duration-150 ease-in-out hover:text-primary-300 hover:underline"
+                      className="rounded-md text-primary-600 no-underline transition-colors duration-150 ease-in-out hover:text-primary-500 hover:underline"
                     >
                       <h2>Find out</h2>
                     </button>

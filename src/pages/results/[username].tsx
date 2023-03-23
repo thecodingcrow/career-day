@@ -58,15 +58,12 @@ const Results = () => {
   }, []);
 
   console.log(
-    indexOfLatestEntry,
+    [1, 1, 1, 1, 1, 1, 1, 1].length,
     Math.max(indexOfLatestEntry - 5, 0),
-    Math.min(indexOfLatestEntry + 6, allResults.length - 1),
-    allResults.slice(
+    Math.min(indexOfLatestEntry + 6, [1, 1, 1, 1, 1, 1, 1, 1].length - 1),
+    [1, 1, 1, 1, 1, 1, 1, 1].slice(
       Math.max(indexOfLatestEntry - 5, 0),
-      Math.min(
-        indexOfLatestEntry + 6,
-        allResults.length - 1 === 0 ? 1 : allResults.length - 1
-      )
+      Math.min(indexOfLatestEntry + 6, [1, 1, 1, 1, 1, 1, 1, 1].length)
     )
   );
 
@@ -91,10 +88,7 @@ const Results = () => {
                 {allResults
                   .slice(
                     Math.max(indexOfLatestEntry - 5, 0),
-                    Math.min(
-                      indexOfLatestEntry + 6,
-                      allResults.length - 1 === 0 ? 1 : allResults.length - 1
-                    )
+                    Math.min(indexOfLatestEntry + 6, allResults.length)
                   )
                   .map(({ score, timestamp, username, rank }, i) => (
                     <tr

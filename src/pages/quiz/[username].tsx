@@ -304,7 +304,7 @@ export function getServerSideProps() {
       question:
         "What happens after executing `sudo rm -rf --no-preserve-root /`?",
       possibleAnswers: [
-        "The internet will deleted",
+        "The internet will be deleted",
         "Your computer overheats",
         "All lights go out",
         "Your dog jumps in front of a bus",

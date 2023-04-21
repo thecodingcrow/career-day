@@ -5,3 +5,17 @@
 svg {
   height: 7rem;
 }
+
+@font-face {
+  font-family: montserrat-bold;
+  src: url(./fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(./fonts/Montserrat-Regular.ttf);
+}
+
+body {
+  font-family: montserrat;
+}

@@ -42,6 +42,14 @@ const config = {
         "primary-legacy": "#b73f8f",
         black: "#030005",
         t3Black: "#15162c",
+        green: {
+          default: "hsl(120, 50%, 50%)",
+          light: "hsl(102, 30%, 20%)",
+        },
+        red: {
+          default: "hsl(0, 70%, 50%)",
+          light: "hsl(342, 50%, 20%)",
+        },
       },
     },
   },

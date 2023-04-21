@@ -5,14 +5,22 @@ import { SessionProvider } from "next-auth/react";
 import { api } from "~/utils/api";
 
 import "~/styles/globals.css";
+import {
+  QuestionContext,
+  useInitializeQuestionContext as useInitializeQuestionState,
+} from "~/hooks/useQuestionContext";
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
   pageProps: { session, ...pageProps },
 }) => {
+  const defaultState = useInitializeQuestionState();
+
   return (
     <SessionProvider session={session}>
-      <Component {...pageProps} />
+      <QuestionContext.Provider value={defaultState}>
+        <Component {...pageProps} />
+      </QuestionContext.Provider>
     </SessionProvider>
   );
 };

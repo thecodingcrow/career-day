@@ -44,7 +44,8 @@ const Home: NextPage = () => {
         </h2>
         <form
           className="flex gap-4 rounded-lg bg-[#0D111C] p-4"
-          onSubmit={async (): any => {
+          // eslint-disable-next-line @typescript-eslint/no-misused-promises
+          onSubmit={async () => {
             await router.push(username !== "" ? "/quiz/" + username : "");
           }}
         >

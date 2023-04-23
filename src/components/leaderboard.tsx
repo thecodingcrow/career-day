@@ -1,4 +1,5 @@
 import classnames from "classnames";
+import Link from "next/link";
 import { useEffect } from "react";
 import { type Question } from "~/hooks/useQuestionContext";
 
@@ -80,6 +81,15 @@ export const LeaderBoard = ({
               ))}
           </tbody>
         </table>
+      </div>
+
+      <div className="mt-8 flex w-full items-center justify-between">
+        <Link
+          className="rounded-xl  bg-[#0D111C] px-5 py-3 text-xl text-primary-600 transition-colors duration-150 ease-in-out hover:bg-[#2E3443] active:bg-cold-800"
+          href={"/"}
+        >
+          restart
+        </Link>
       </div>
     </div>
   );

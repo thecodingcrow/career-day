@@ -88,14 +88,6 @@ const Results = () => {
             })()}
           </div>
         </div>
-        <div className="mt-8 flex w-full items-center justify-between">
-          <Link
-            className="rounded-xl  bg-cold-900 px-5 py-3 text-xl text-primary-600 transition-colors duration-150 ease-in-out hover:bg-cold-800 active:bg-cold-700"
-            href={"/"}
-          >
-            restart
-          </Link>
-        </div>
       </div>
     </Layout>
   );

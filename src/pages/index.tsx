@@ -2,6 +2,7 @@
 import { type NextPage } from "next";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Layout } from "~/components/layout";
 import { useQuestionContext } from "~/hooks/useQuestionContext";
@@ -9,6 +10,7 @@ import { useQuestionContext } from "~/hooks/useQuestionContext";
 import { api } from "~/utils/api";
 
 const Home: NextPage = () => {
+  const router = useRouter();
   const [username, setUsername] = useState("");
   const { shuffleQuestions } = useQuestionContext();
 
@@ -40,7 +42,12 @@ const Home: NextPage = () => {
         <h2 className="mb-3 block text-center text-primary-legacy">
           Score more than 3 points and get a Red Bull
         </h2>
-        <div className="flex gap-4 rounded-lg bg-[#0D111C] p-4">
+        <form
+          className="flex gap-4 rounded-lg bg-[#0D111C] p-4"
+          onSubmit={async (): any => {
+            await router.push(username !== "" ? "/quiz/" + username : "");
+          }}
+        >
           <input
             autoComplete="off"
             aria-autocomplete="none"
@@ -50,14 +57,10 @@ const Home: NextPage = () => {
             onChange={(e) => setUsername(e.target.value)}
           />
 
-          <Link
-            href={username !== "" ? "/quiz/" + username : ""}
-            passHref
-            className="rounded-lg bg-primary-600 px-6 py-3 text-xl text-t3Black transition-colors duration-150 ease-in-out hover:bg-primary-500 active:bg-primary-400"
-          >
+          <button className="rounded-lg bg-primary-600 px-6 py-3 text-xl text-t3Black transition-colors duration-150 ease-in-out hover:bg-primary-500 active:bg-primary-400">
             enter
-          </Link>
-        </div>
+          </button>
+        </form>
       </div>
     </Layout>
   );

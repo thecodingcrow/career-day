@@ -1,5 +1,309 @@
 import { type Question } from "~/hooks/useQuestionContext";
 
+const funQuestions: Question[] = [
+  {
+    question:
+      "What popular internet meme is typically captioned with the phrase 'Ight, Imma head out'?",
+    possibleAnswers: [
+      "Arthur",
+      "SpongeBob SquarePants",
+      "Pepe the Frog",
+      "Bad Luck Brian",
+    ],
+    correctAnswer: 1,
+  },
+  {
+    question: "Why did the tomato turn red?",
+    possibleAnswers: [
+      "It saw a pretty apple",
+      "It was shy",
+      "It blushed",
+      "It got sunburned",
+    ],
+    correctAnswer: 0,
+  },
+  {
+    question: "What do you call a fake noodle?",
+    possibleAnswers: ["Spoodle", "Foodle", "Impasta", "Noodlet"],
+    correctAnswer: 2,
+  },
+  {
+    question: "Why do programmers prefer dark mode?",
+    possibleAnswers: [
+      "To reduce the light-ning bugs",
+      "To see the matrix",
+      "To impress girls",
+      "To hide from the boss",
+    ],
+    correctAnswer: 0,
+  },
+  {
+    question: "Why do programmers always mix up Halloween and Christmas?",
+    possibleAnswers: [
+      "Because Oct 31 equals Dec 25",
+      "Because of their coding skills",
+      "Because of the stress",
+      "Because they like scary code",
+    ],
+    correctAnswer: 0,
+  },
+  {
+    question: "Why do programmers hate nature?",
+    possibleAnswers: [
+      "It has too many bugs",
+      "It's too green",
+      "It's too hot",
+      "It's too wet",
+    ],
+    correctAnswer: 0,
+  },
+  {
+    question: "What do you call a programmer who's always hungry?",
+    possibleAnswers: [
+      "A byte-eater",
+      "A snack overflow",
+      "A code muncher",
+      "A data digestor",
+    ],
+    correctAnswer: 1,
+  },
+  {
+    question: "Why do programmers wear glasses?",
+    possibleAnswers: [
+      "Because they can't C#",
+      "To look smarter",
+      "To fit in with other programmers",
+      "To keep their eyes healthy",
+    ],
+    correctAnswer: 0,
+  },
+  {
+    question: "What do you call a group of programmers?",
+    possibleAnswers: ["A Clique", "An Assembly", "A Posse", "A Squadron"],
+    correctAnswer: 1,
+  },
+  {
+    question: "Why do Java developers wear sun glasses?",
+    possibleAnswers: [
+      "To look cool",
+      "To hide their identity",
+      "Because they stare straight into the Eclipse!",
+      "To avoid eye contact",
+    ],
+    correctAnswer: 2,
+  },
+  {
+    question: "What do you call software that kills someone?",
+    possibleAnswers: [
+      "Deadly Code",
+      "Code-blooded murderer",
+      "Killer Program",
+      "Fatal Application",
+    ],
+    correctAnswer: 1,
+  },
+  {
+    question: "What did the .NET developer name their boat?",
+    possibleAnswers: ["Net Boat", "Sharp Boat", "Boat.NET", "Sea Sharp"],
+    correctAnswer: 3,
+  },
+  {
+    question: "I like my coffee like I like my IDEs…",
+    possibleAnswers: [
+      "Colorful and customizable",
+      "Easy to use",
+      "Dark and free",
+      "Robust and efficient",
+    ],
+    correctAnswer: 2,
+  },
+  {
+    question: "What’s a better name for Frontend Developers?",
+    possibleAnswers: ["HTMLers", "<div>elopers", "Frontenders", "CSSmiths"],
+    correctAnswer: 1,
+  },
+  {
+    question: "Which Hogwarts house is able to communicate securely?",
+    possibleAnswers: ["Hufflepuff", "Gryffindor", "Ravenclaw", "SSLytheryn"],
+    correctAnswer: 3,
+  },
+  {
+    question: "You know how a hacker escapes the FBI?",
+    possibleAnswers: ["<Escape>", "\\FBI", "/Escape", "|FBI|"],
+    correctAnswer: 1,
+  },
+  {
+    question:
+      "What’s the difference between a delicious dinner and a slow computer?",
+    possibleAnswers: [
+      "One is tasty and the other is not",
+      "One is expensive and the other is not",
+      "One’s a rack of lamb and the other’s a lack of RAM.",
+      "There's no difference",
+    ],
+    correctAnswer: 2,
+  },
+  {
+    question: "What is a software developer’s favorite herb?",
+    possibleAnswers: ["Thyme", "Rosemary", "Basil", "Parsley"],
+    correctAnswer: 3,
+  },
+  {
+    question: "What is a web developer’s favorite tea?",
+    possibleAnswers: ["Green Tea", "Earl Grey", "Chamomile", "URL Grey"],
+    correctAnswer: 3,
+  },
+  {
+    question: "What do toll booths and Microsoft have in common?",
+    possibleAnswers: [
+      "They're both toll collectors",
+      "They both charge you money",
+      "They're both gatekeepers",
+      "They're both Bill Gates",
+    ],
+    correctAnswer: 3,
+  },
+  {
+    question: "What’s a programmer’s favorite horror movie?",
+    possibleAnswers: [
+      "The XORcist",
+      "Nightmare on Binary Street",
+      "The Loops of Madness",
+      "The Program",
+    ],
+    correctAnswer: 0,
+  },
+  {
+    question:
+      "What do you call people who used the internet before it was cool?",
+    possibleAnswers: [
+      "Web veterans",
+      "Httpsters",
+      "Netizens",
+      "Cyber pioneers",
+    ],
+    correctAnswer: 1,
+  },
+
+  {
+    question: "What does an embedded systems programmer eat for breakfast?",
+    possibleAnswers: ["Java", "Cereal", "“char i/o”s", "Eggs"],
+    correctAnswer: 2,
+  },
+
+  {
+    question: "Why do opticians hate Microsoft software developers?",
+    possibleAnswers: [
+      "Because they wear thick glasses",
+      "Because they use Windows",
+      "Because they C#",
+      "Because they are always debugging",
+    ],
+    correctAnswer: 2,
+  },
+
+  {
+    question: "Why aren't frontend developers humble?",
+    possibleAnswers: [
+      "They have too much experience",
+      "They display: flex;",
+      "They have too much confidence",
+      "They are too young",
+    ],
+    correctAnswer: 1,
+  },
+
+  {
+    question: "You know what screams “I’m insecure”?",
+    possibleAnswers: ["ftp://", "ssh://", "https://", "http://"],
+    correctAnswer: 3,
+  },
+
+  {
+    question: "Why did the programmer cross the road?",
+    possibleAnswers: [
+      "To get to the other side",
+      "To reach the nearest Starbucks",
+      "To reach the nearest pub",
+      "To get to the other IDE",
+    ],
+    correctAnswer: 3,
+  },
+
+  {
+    question:
+      "What did Peter Parker do after he lost his job as a photographer at the Daily Bugle?",
+    possibleAnswers: [
+      "He became a barista",
+      "He transitioned into web development",
+      "He became a taxi driver",
+      "He joined the army",
+    ],
+    correctAnswer: 1,
+  },
+
+  {
+    question: "Why was a web developer’s boat always sinking?",
+    possibleAnswers: [
+      "They were using Internet Explorer",
+      "They had too many anchors",
+      "They didn't know how to swim",
+      "The boat was too small",
+    ],
+    correctAnswer: 1,
+  },
+
+  {
+    question: "Why are i and j are good sources of information?",
+    possibleAnswers: [
+      "Because they are short",
+      "Because they are always in the loop",
+      "Because they are easy to remember",
+      "Because they are easy to type",
+    ],
+    correctAnswer: 1,
+  },
+
+  {
+    question: "How did pirates communicate before the internet?",
+    possibleAnswers: [
+      "Pier-to-pier networking",
+      "Smoke signals",
+      "Carrier pigeon",
+      "Semaphore",
+    ],
+    correctAnswer: 0,
+  },
+
+  {
+    question: "Why do software developers use dark themes?",
+    possibleAnswers: [
+      "Because they are easier on the eyes",
+      "Because bugs are attracted to the light",
+      "Because they are more professional",
+      "Because they are cheaper",
+    ],
+    correctAnswer: 1,
+  },
+
+  {
+    question: "Why do SQL developers have one of the highest rates of divorce?",
+    possibleAnswers: [
+      "Because they are always at work",
+      "Because they have poor social skills",
+      "Because they have one-to-many relationships",
+      "Because they have high salaries",
+    ],
+    correctAnswer: 2,
+  },
+
+  {
+    question: "What’s a programmer’s favorite beverage?",
+    possibleAnswers: ["Coffee", "Tea", "Soda", "Beer"],
+    correctAnswer: 2,
+  },
+];
+
 const generalITQuestions: Question[] = [
   {
     question:
@@ -17,7 +321,11 @@ const generalITQuestions: Question[] = [
     ],
     correctAnswer: 1,
   },
-
+  {
+    question: "What is the most popular social media platform?",
+    possibleAnswers: ["TikTok", "Snapchat", "Instagram", "Facebook"],
+    correctAnswer: 2,
+  },
   {
     question:
       "What is a JavaScript element that represents either TRUE or FALSE values?",
@@ -34,7 +342,7 @@ const generalITQuestions: Question[] = [
   {
     question: "What is another word for applications?",
     possibleAnswers: ["Drivers", "Peripherals", "Programs", "Hardware"],
-    correctAnswer: 3,
+    correctAnswer: 2,
   },
   {
     question: "What was the first emoticon ever used?",
@@ -161,6 +469,43 @@ const generalITQuestions: Question[] = [
       "Which of the following is NOT a valid value for the CSS 'display' property?",
     possibleAnswers: ["none", "inline-block", "vertical", "flex"],
     correctAnswer: 2,
+  },
+  {
+    question: "What does CPU stand for?",
+    possibleAnswers: [
+      "Central Processing Unit",
+      "Control Processing Unit",
+      "Computer Power Unit",
+      "Core Processing Unit",
+    ],
+    correctAnswer: 0,
+  },
+  {
+    question:
+      "What is the term for a type of malware that spreads itself by duplicating and infecting other programs?",
+    possibleAnswers: ["Virus", "Worm", "Trojan", "Spyware"],
+    correctAnswer: 1,
+  },
+  {
+    question: "What is the default port number for HTTP traffic?",
+    possibleAnswers: ["80", "443", "22", "25"],
+    correctAnswer: 0,
+  },
+  {
+    question:
+      "What is the acronym for the process of converting speech into text?",
+    possibleAnswers: ["OCR", "ASR", "NLP", "AI"],
+    correctAnswer: 1,
+  },
+  {
+    question: "Which company has an AI-Assistant called Cortana?",
+    possibleAnswers: ["Apple", "Microsoft", "Amazon", "Samsung"],
+    correctAnswer: 1,
+  },
+  {
+    question: "Which company has an AI-Assistant called Sam?",
+    possibleAnswers: ["Apple", "Microsoft", "Amazon", "Samsung"],
+    correctAnswer: 3,
   },
 
   // {
@@ -385,5 +730,6 @@ const spengergasseQuestions: Question[] = [
 export const questions = [
   ...generalITQuestions,
   ...leanCodersQuestions,
+  ...funQuestions,
   // ...spengergasseQuestions,
 ];

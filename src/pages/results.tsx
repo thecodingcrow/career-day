@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/restrict-plus-operands */
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Layout } from "~/components/layout";
 import { LeaderBoard, type LeaderBoardProps } from "~/components/leaderboard";
@@ -14,9 +13,7 @@ const Results = () => {
   });
 
   useEffect(() => {
-    const results = extractResultsFromLocalStorage();
-    console.log("CURRENT", results);
-    setAllResults(results);
+    setAllResults(extractResultsFromLocalStorage());
   }, []);
 
   return (

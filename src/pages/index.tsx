@@ -1,21 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
 import { type NextPage } from "next";
-import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Layout } from "~/components/layout";
 import { useQuestionContext } from "~/hooks/useQuestionContext";
-
-import { api } from "~/utils/api";
+import { shuffleArray } from "~/lib/helpers";
 
 const Home: NextPage = () => {
-  const router = useRouter();
   const [username, setUsername] = useState("");
-  const { shuffleQuestions } = useQuestionContext();
+  const { setQuestions } = useQuestionContext();
 
   useEffect(() => {
-    shuffleQuestions();
+    setQuestions((prev) => {
+      shuffleArray(prev);
+      return prev;
+    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -45,8 +44,11 @@ const Home: NextPage = () => {
         <form
           className="flex gap-4 rounded-lg bg-[#0D111C] p-4"
           // eslint-disable-next-line @typescript-eslint/no-misused-promises
-          onSubmit={async () => {
-            await router.push(username !== "" ? "/quiz/" + username : "");
+          onSubmit={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const link = document.getElementById("enterQuiz");
+            link?.click();
           }}
         >
           <input
@@ -58,9 +60,14 @@ const Home: NextPage = () => {
             onChange={(e) => setUsername(e.target.value)}
           />
 
-          <button className="rounded-lg bg-primary-600 px-6 py-3 text-xl text-t3Black transition-colors duration-150 ease-in-out hover:bg-primary-500 active:bg-primary-400">
+          <Link
+            passHref
+            id="enterQuiz"
+            href={username !== "" ? "/quiz/" + username : ""}
+            className="rounded-lg bg-primary-600 px-6 py-3 text-xl text-t3Black transition-colors duration-150 ease-in-out hover:bg-primary-500 active:bg-primary-400"
+          >
             enter
-          </button>
+          </Link>
         </form>
       </div>
     </Layout>
@@ -68,27 +75,3 @@ const Home: NextPage = () => {
 };
 
 export default Home;
-
-const AuthShowcase: React.FC = () => {
-  const { data: sessionData } = useSession();
-
-  const { data: secretMessage } = api.quiz.getSecretMessage.useQuery(
-    undefined, // no input
-    { enabled: sessionData?.user !== undefined }
-  );
-
-  return (
-    <div className="flex flex-col items-center justify-center gap-4">
-      <p className="text-center text-2xl text-white">
-        {sessionData && <span>Logged in as {sessionData.user?.name}</span>}
-        {secretMessage && <span> - {secretMessage}</span>}
-      </p>
-      <button
-        className="rounded-full bg-white/10 px-10 py-3 font-semibold text-white no-underline transition hover:bg-white/20"
-        onClick={sessionData ? () => void signOut() : () => void signIn()}
-      >
-        {sessionData ? "Sign out" : "Sign in"}
-      </button>
-    </div>
-  );
-};

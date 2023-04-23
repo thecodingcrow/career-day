@@ -44,7 +44,7 @@ const Quiz = () => {
       "LC-quiz:" + username + ":" + Date.now(),
       JSON.stringify({
         answers,
-        questions,
+        questions: questions.slice(0, answers.length),
         score,
       })
     );

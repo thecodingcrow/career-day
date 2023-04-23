@@ -1,6 +1,9 @@
-import { createContext, useContext, useState } from "react";
-import { shuffleArray } from "~/lib/helpers";
-import { questions } from "~/lib/questions";
+import {
+  type Dispatch,
+  type SetStateAction,
+  createContext,
+  useContext,
+} from "react";
 
 export interface Question {
   question: string;
@@ -8,31 +11,13 @@ export interface Question {
   correctAnswer: number;
 }
 
-export interface QuestionState {
+export const QuestionContext = createContext<{
   questions: Question[];
-  shuffleQuestions: () => void;
-}
-
-const questionStateDefault: QuestionState = {
-  questions,
-  shuffleQuestions: () => undefined,
-};
-
-export const QuestionContext =
-  createContext<QuestionState>(questionStateDefault);
+  setQuestions: Dispatch<SetStateAction<Question[]>>;
+}>({
+  questions: [],
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  setQuestions: () => {},
+});
 
 export const useQuestionContext = () => useContext(QuestionContext);
-
-export const useInitializeQuestionContext = () => {
-  const [questionState, setQuestionState] = useState<QuestionState>({
-    ...questionStateDefault,
-    shuffleQuestions: () => {
-      setQuestionState((prev) => {
-        shuffleArray(prev.questions);
-        return prev;
-      });
-    },
-  });
-
-  return questionState;
-};

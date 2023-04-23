@@ -1,27 +1,28 @@
-import { type AppType } from "next/app";
 import { type Session } from "next-auth";
 import { SessionProvider } from "next-auth/react";
+import { type AppType } from "next/app";
+import { questions } from "~/lib/questions";
 
 import { api } from "~/utils/api";
 
+import { type Question, QuestionContext } from "~/hooks/useQuestionContext";
 import "~/styles/globals.css";
-import {
-  QuestionContext,
-  useInitializeQuestionContext as useInitializeQuestionState,
-} from "~/hooks/useQuestionContext";
+import { useState } from "react";
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
   pageProps: { session, ...pageProps },
 }) => {
-  const defaultState = useInitializeQuestionState();
+  const [questionState, setQuestionState] = useState<Question[]>(questions);
 
   return (
-    <SessionProvider session={session}>
-      <QuestionContext.Provider value={defaultState}>
+    <QuestionContext.Provider
+      value={{ questions: questionState, setQuestions: setQuestionState }}
+    >
+      <SessionProvider session={session}>
         <Component {...pageProps} />
-      </QuestionContext.Provider>
-    </SessionProvider>
+      </SessionProvider>
+    </QuestionContext.Provider>
   );
 };
 

@@ -12,16 +12,16 @@ const funQuestions: Question[] = [
     ],
     correctAnswer: 1,
   },
-  {
-    question: "Why did the tomato turn red?",
-    possibleAnswers: [
-      "It saw a pretty apple",
-      "It was shy",
-      "It blushed",
-      "It got sunburned",
-    ],
-    correctAnswer: 0,
-  },
+  // {
+  //   question: "Why did the tomato turn red?",
+  //   possibleAnswers: [
+  //     "It saw a pretty apple",
+  //     "It was shy",
+  //     "It blushed",
+  //     "It got sunburned",
+  //   ],
+  //   correctAnswer: 0,
+  // },
   {
     question: "What do you call a fake noodle?",
     possibleAnswers: ["Spoodle", "Foodle", "Impasta", "Noodlet"],
@@ -57,16 +57,16 @@ const funQuestions: Question[] = [
     ],
     correctAnswer: 0,
   },
-  {
-    question: "What do you call a programmer who's always hungry?",
-    possibleAnswers: [
-      "A byte-eater",
-      "A snack overflow",
-      "A code muncher",
-      "A data digestor",
-    ],
-    correctAnswer: 1,
-  },
+  // {
+  //   question: "What do you call a programmer who's always hungry?",
+  //   possibleAnswers: [
+  //     "A byte-eater",
+  //     "A snack overflow",
+  //     "A code muncher",
+  //     "A data digestor",
+  //   ],
+  //   correctAnswer: 1,
+  // },
   {
     question: "Why do programmers wear glasses?",
     possibleAnswers: [
@@ -92,16 +92,16 @@ const funQuestions: Question[] = [
     ],
     correctAnswer: 2,
   },
-  {
-    question: "What do you call software that kills someone?",
-    possibleAnswers: [
-      "Deadly Code",
-      "Code-blooded murderer",
-      "Killer Program",
-      "Fatal Application",
-    ],
-    correctAnswer: 1,
-  },
+  // {
+  //   question: "What do you call software that kills someone?",
+  //   possibleAnswers: [
+  //     "Deadly Code",
+  //     "Code-blooded murderer",
+  //     "Killer Program",
+  //     "Fatal Application",
+  //   ],
+  //   correctAnswer: 1,
+  // },
   {
     question: "What did the .NET developer name their boat?",
     possibleAnswers: ["Net Boat", "Sharp Boat", "Boat.NET", "Sea Sharp"],
@@ -122,47 +122,47 @@ const funQuestions: Question[] = [
     possibleAnswers: ["HTMLers", "<div>elopers", "Frontenders", "CSSmiths"],
     correctAnswer: 1,
   },
-  {
-    question: "Which Hogwarts house is able to communicate securely?",
-    possibleAnswers: ["Hufflepuff", "Gryffindor", "Ravenclaw", "SSLytheryn"],
-    correctAnswer: 3,
-  },
+  // {
+  //   question: "Which Hogwarts house is able to communicate securely?",
+  //   possibleAnswers: ["Hufflepuff", "Gryffindor", "Ravenclaw", "SSLytheryn"],
+  //   correctAnswer: 3,
+  // },
   {
     question: "You know how a hacker escapes the FBI?",
     possibleAnswers: ["<Escape>", "\\FBI", "/Escape", "|FBI|"],
     correctAnswer: 1,
   },
-  {
-    question:
-      "What’s the difference between a delicious dinner and a slow computer?",
-    possibleAnswers: [
-      "One is tasty and the other is not",
-      "One is expensive and the other is not",
-      "One’s a rack of lamb and the other’s a lack of RAM.",
-      "There's no difference",
-    ],
-    correctAnswer: 2,
-  },
-  {
-    question: "What is a software developer’s favorite herb?",
-    possibleAnswers: ["Thyme", "Rosemary", "Basil", "Parsley"],
-    correctAnswer: 3,
-  },
-  {
-    question: "What is a web developer’s favorite tea?",
-    possibleAnswers: ["Green Tea", "Earl Grey", "Chamomile", "URL Grey"],
-    correctAnswer: 3,
-  },
-  {
-    question: "What do toll booths and Microsoft have in common?",
-    possibleAnswers: [
-      "They're both toll collectors",
-      "They both charge you money",
-      "They're both gatekeepers",
-      "They're both Bill Gates",
-    ],
-    correctAnswer: 3,
-  },
+  // {
+  //   question:
+  //     "What’s the difference between a delicious dinner and a slow computer?",
+  //   possibleAnswers: [
+  //     "One is tasty and the other is not",
+  //     "One is expensive and the other is not",
+  //     "One’s a rack of lamb and the other’s a lack of RAM.",
+  //     "There's no difference",
+  //   ],
+  //   correctAnswer: 2,
+  // },
+  // {
+  //   question: "What is a software developer’s favorite herb?",
+  //   possibleAnswers: ["Thyme", "Rosemary", "Basil", "Parsley"],
+  //   correctAnswer: 3,
+  // },
+  // {
+  //   question: "What is a web developer’s favorite tea?",
+  //   possibleAnswers: ["Green Tea", "Earl Grey", "Chamomile", "URL Grey"],
+  //   correctAnswer: 3,
+  // },
+  // {
+  //   question: "What do toll booths and Microsoft have in common?",
+  //   possibleAnswers: [
+  //     "They're both toll collectors",
+  //     "They both charge you money",
+  //     "They're both gatekeepers",
+  //     "They're both Bill Gates",
+  //   ],
+  //   correctAnswer: 3,
+  // },
   {
     question: "What’s a programmer’s favorite horror movie?",
     possibleAnswers: [
@@ -173,23 +173,23 @@ const funQuestions: Question[] = [
     ],
     correctAnswer: 0,
   },
-  {
-    question:
-      "What do you call people who used the internet before it was cool?",
-    possibleAnswers: [
-      "Web veterans",
-      "Httpsters",
-      "Netizens",
-      "Cyber pioneers",
-    ],
-    correctAnswer: 1,
-  },
+  // {
+  //   question:
+  //     "What do you call people who used the internet before it was cool?",
+  //   possibleAnswers: [
+  //     "Web veterans",
+  //     "Httpsters",
+  //     "Netizens",
+  //     "Cyber pioneers",
+  //   ],
+  //   correctAnswer: 1,
+  // },
 
-  {
-    question: "What does an embedded systems programmer eat for breakfast?",
-    possibleAnswers: ["Java", "Cereal", "“char i/o”s", "Eggs"],
-    correctAnswer: 2,
-  },
+  // {
+  //   question: "What does an embedded systems programmer eat for breakfast?",
+  //   possibleAnswers: ["Java", "Cereal", "“char i/o”s", "Eggs"],
+  //   correctAnswer: 2,
+  // },
 
   {
     question: "Why do opticians hate Microsoft software developers?",
@@ -202,56 +202,56 @@ const funQuestions: Question[] = [
     correctAnswer: 2,
   },
 
-  {
-    question: "Why aren't frontend developers humble?",
-    possibleAnswers: [
-      "They have too much experience",
-      "They display: flex;",
-      "They have too much confidence",
-      "They are too young",
-    ],
-    correctAnswer: 1,
-  },
+  // {
+  //   question: "Why aren't frontend developers humble?",
+  //   possibleAnswers: [
+  //     "They have too much experience",
+  //     "They display: flex;",
+  //     "They have too much confidence",
+  //     "They are too young",
+  //   ],
+  //   correctAnswer: 1,
+  // },
 
-  {
-    question: "You know what screams “I’m insecure”?",
-    possibleAnswers: ["ftp://", "ssh://", "https://", "http://"],
-    correctAnswer: 3,
-  },
+  // {
+  //   question: "You know what screams “I’m insecure”?",
+  //   possibleAnswers: ["ftp://", "ssh://", "https://", "http://"],
+  //   correctAnswer: 3,
+  // },
 
-  {
-    question: "Why did the programmer cross the road?",
-    possibleAnswers: [
-      "To get to the other side",
-      "To reach the nearest Starbucks",
-      "To reach the nearest pub",
-      "To get to the other IDE",
-    ],
-    correctAnswer: 3,
-  },
+  // {
+  //   question: "Why did the programmer cross the road?",
+  //   possibleAnswers: [
+  //     "To get to the other side",
+  //     "To reach the nearest Starbucks",
+  //     "To reach the nearest pub",
+  //     "To get to the other IDE",
+  //   ],
+  //   correctAnswer: 3,
+  // },
 
-  {
-    question:
-      "What did Peter Parker do after he lost his job as a photographer at the Daily Bugle?",
-    possibleAnswers: [
-      "He became a barista",
-      "He transitioned into web development",
-      "He became a taxi driver",
-      "He joined the army",
-    ],
-    correctAnswer: 1,
-  },
+  // {
+  //   question:
+  //     "What did Peter Parker do after he lost his job as a photographer at the Daily Bugle?",
+  //   possibleAnswers: [
+  //     "He became a barista",
+  //     "He transitioned into web development",
+  //     "He became a taxi driver",
+  //     "He joined the army",
+  //   ],
+  //   correctAnswer: 1,
+  // },
 
-  {
-    question: "Why was a web developer’s boat always sinking?",
-    possibleAnswers: [
-      "They were using Internet Explorer",
-      "They had too many anchors",
-      "They didn't know how to swim",
-      "The boat was too small",
-    ],
-    correctAnswer: 1,
-  },
+  // {
+  //   question: "Why was a web developer’s boat always sinking?",
+  //   possibleAnswers: [
+  //     "They were using Internet Explorer",
+  //     "They had too many anchors",
+  //     "They didn't know how to swim",
+  //     "The boat was too small",
+  //   ],
+  //   correctAnswer: 1,
+  // },
 
   {
     question: "Why are i and j are good sources of information?",
@@ -264,44 +264,44 @@ const funQuestions: Question[] = [
     correctAnswer: 1,
   },
 
-  {
-    question: "How did pirates communicate before the internet?",
-    possibleAnswers: [
-      "Pier-to-pier networking",
-      "Smoke signals",
-      "Carrier pigeon",
-      "Semaphore",
-    ],
-    correctAnswer: 0,
-  },
+  // {
+  //   question: "How did pirates communicate before the internet?",
+  //   possibleAnswers: [
+  //     "Pier-to-pier networking",
+  //     "Smoke signals",
+  //     "Carrier pigeon",
+  //     "Semaphore",
+  //   ],
+  //   correctAnswer: 0,
+  // },
 
-  {
-    question: "Why do software developers use dark themes?",
-    possibleAnswers: [
-      "Because they are easier on the eyes",
-      "Because bugs are attracted to the light",
-      "Because they are more professional",
-      "Because they are cheaper",
-    ],
-    correctAnswer: 1,
-  },
+  // {
+  //   question: "Why do software developers use dark themes?",
+  //   possibleAnswers: [
+  //     "Because they are easier on the eyes",
+  //     "Because bugs are attracted to the light",
+  //     "Because they are more professional",
+  //     "Because they are cheaper",
+  //   ],
+  //   correctAnswer: 1,
+  // },
 
-  {
-    question: "Why do SQL developers have one of the highest rates of divorce?",
-    possibleAnswers: [
-      "Because they are always at work",
-      "Because they have poor social skills",
-      "Because they have one-to-many relationships",
-      "Because they have high salaries",
-    ],
-    correctAnswer: 2,
-  },
+  // {
+  //   question: "Why do SQL developers have one of the highest rates of divorce?",
+  //   possibleAnswers: [
+  //     "Because they are always at work",
+  //     "Because they have poor social skills",
+  //     "Because they have one-to-many relationships",
+  //     "Because they have high salaries",
+  //   ],
+  //   correctAnswer: 2,
+  // },
 
-  {
-    question: "What’s a programmer’s favorite beverage?",
-    possibleAnswers: ["Coffee", "Tea", "Soda", "Beer"],
-    correctAnswer: 2,
-  },
+  // {
+  //   question: "What’s a programmer’s favorite beverage?",
+  //   possibleAnswers: ["Coffee", "Tea", "Soda", "Beer"],
+  //   correctAnswer: 2,
+  // },
 ];
 
 const generalITQuestions: Question[] = [
@@ -375,16 +375,16 @@ const generalITQuestions: Question[] = [
     possibleAnswers: ["Stack", "Queue", "Linked List", "Tree"],
     correctAnswer: 0,
   },
-  {
-    question: "What is the purpose of the 'alt' attribute in an image tag?",
-    possibleAnswers: [
-      "Specifies the URL of the image file",
-      "Defines a caption for the image",
-      "Provides alternative text for the image",
-      "Specifies the width of the image",
-    ],
-    correctAnswer: 2,
-  },
+  // {
+  //   question: "What is the purpose of the 'alt' attribute in an image tag?",
+  //   possibleAnswers: [
+  //     "Specifies the URL of the image file",
+  //     "Defines a caption for the image",
+  //     "Provides alternative text for the image",
+  //     "Specifies the width of the image",
+  //   ],
+  //   correctAnswer: 2,
+  // },
   {
     question: "Which of the following HTML tags is used to define a hyperlink?",
     possibleAnswers: ["<a>", "<i>", "<d>", "<s>"],
@@ -416,16 +416,16 @@ const generalITQuestions: Question[] = [
     ],
     correctAnswer: 2,
   },
-  {
-    question: "What is the purpose of the HTML 'meta' element?",
-    possibleAnswers: [
-      "To define metadata for a specific element",
-      "To create a section of the webpage",
-      "To define metadata about an HTML document",
-      "To create an ordered list",
-    ],
-    correctAnswer: 2,
-  },
+  // {
+  //   question: "What is the purpose of the HTML 'meta' element?",
+  //   possibleAnswers: [
+  //     "To define metadata for a specific element",
+  //     "To create a section of the webpage",
+  //     "To define metadata about an HTML document",
+  //     "To create an ordered list",
+  //   ],
+  //   correctAnswer: 2,
+  // },
   {
     question:
       "Which of the following is used to add interactivity to a webpage?",

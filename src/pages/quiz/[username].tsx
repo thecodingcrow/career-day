@@ -54,7 +54,7 @@ const Quiz = () => {
 
   return (
     <Layout>
-      <div className="flex flex-col">
+      <div className="flex flex-col text-xl">
         <div className="min-h-[32vh] min-w-[60vw] rounded-lg border border-[#2E3443] bg-[#121A2A] px-6 pb-6 pt-4">
           {!isRunning || index >= questions.length ? (
             <div className="mx-auto flex w-full flex-col items-center gap-5">

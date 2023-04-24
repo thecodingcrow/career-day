@@ -22,12 +22,12 @@ const Home: NextPage = () => {
     <Layout>
       <div className="relative rounded-md border border-[#2E3443] bg-[#121A2A] px-32 py-20 drop-shadow-xl">
         <div className="absolute -top-[25%] left-1/2 -translate-x-1/2 overflow-hidden rounded-md">
-          <img
+          {/* <img
             src="/qr_instagram.jpg"
             height="190"
             width="190"
             alt="Scan this code to follow us on instagram"
-          ></img>
+          ></img> */}
         </div>
         {/* <h1 className="bg-gradient-to-bl from-primary-600 via-t3Black  bg-clip-text p-2 text-[100px] font-extrabold tracking-wide text-transparent">
           LEAN-TRIVIA
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
           className="mt-10 mb-1 w-full text-center text-[50px] font-extrabold tracking-wide text-primary-600 drop-shadow-md"
           style={{ fontFamily: "montserrat-bold" }}
         >
-          SCAN & ENTER
+          ENTER NAME TO START
         </h1>
         <h2 className="mb-3 block text-center text-primary-legacy">
           Score more than 3 points and get a Red Bull

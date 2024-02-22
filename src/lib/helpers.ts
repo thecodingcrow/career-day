@@ -1,12 +1,14 @@
 import { type Question } from "~/hooks/useQuestionContext";
 
-export function shuffleArray(array: object[]) {
+export function shuffleArray(array: Question[]) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    const temp = array[i];
-    array[i] = array[j] as object;
-    array[j] = temp as object;
+    const temp = array[i] as Question;
+    array[i] = array[j] as Question
+    array[j] = temp
   }
+
+  return array
 }
 
 export function extractResultsFromLocalStorage() {

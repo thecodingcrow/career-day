@@ -55,7 +55,7 @@ const Quiz = () => {
   return (
     <Layout>
       <div className="flex flex-col text-xl">
-        <div className="min-h-[32vh] min-w-[60vw] rounded-lg border border-[#2E3443] bg-[#121A2A] px-6 pb-6 pt-4">
+        <div className="min-h-[32vh] min-w-[70vw] rounded-lg border border-[#2E3443] bg-[#121A2A] px-6 pb-6 pt-4">
           {!isRunning || index >= questions.length ? (
             <div className="mx-auto flex w-full flex-col items-center gap-5">
               <img
@@ -117,15 +117,7 @@ const Quiz = () => {
         </div>
 
         <div className="mt-8 flex items-center justify-between">
-          {isRunning && (
-            <button
-              className="rounded-lg bg-primary-600 px-5 py-3 text-xl text-t3Black transition-colors duration-150 ease-in-out hover:bg-primary-500 active:bg-primary-400"
-              onClick={selectNextQuestion}
-            >
-              Next
-            </button>
-          )}
-          <div className="ml-auto flex min-w-[150px] items-center justify-center rounded-lg border border-primary-600 px-4 pb-2 pt-1.5 text-4xl">
+          <div className="mr-auto flex min-w-[150px] items-center justify-center rounded-lg border border-primary-600 px-4 pb-2 pt-1.5 text-4xl">
             <span className="mr-[2px] block">
               {minutes.toString().padStart(2, "0")}
             </span>
@@ -134,6 +126,15 @@ const Quiz = () => {
               {seconds < 60 ? seconds.toString().padStart(2, "0") : seconds}
             </span>
           </div>
+
+          {isRunning && (
+            <button
+              className="rounded-lg bg-primary-600 px-5 py-3 text-xl text-t3Black transition-colors duration-150 ease-in-out hover:bg-primary-500 active:bg-primary-400"
+              onClick={selectNextQuestion}
+            >
+              Next
+            </button>
+          )}
         </div>
       </div>
     </Layout>

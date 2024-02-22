@@ -12,8 +12,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     setQuestions((prev) => {
-      shuffleArray(prev);
-      return prev;
+      return shuffleArray(prev);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -36,7 +35,7 @@ const Home: NextPage = () => {
           className="mt-10 mb-1 w-full text-center text-[50px] font-extrabold tracking-wide text-primary-600 drop-shadow-md"
           style={{ fontFamily: "montserrat-bold" }}
         >
-          ENTER NAME TO START
+          ENTER EMAIL TO START
         </h1>
         <h2 className="mb-3 block text-center text-primary-legacy">
           Score more than 3 points and get a Red Bull
@@ -54,20 +53,23 @@ const Home: NextPage = () => {
           <input
             autoComplete="off"
             aria-autocomplete="none"
-            placeholder="username"
+            placeholder="Enter your email to start"
             className="w-full rounded-lg bg-inverted pl-2 text-t3Black outline-none"
-            type="text"
+            type="email"
             onChange={(e) => setUsername(e.target.value)}
           />
 
-          <Link
-            passHref
+          <button
             id="enterQuiz"
-            href={username !== "" ? "/quiz/" + username : ""}
-            className="rounded-lg bg-primary-600 px-6 py-3 text-xl text-t3Black transition-colors duration-150 ease-in-out hover:bg-primary-500 active:bg-primary-400"
+            type="submit"
+            disabled={!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(username)}
+            onClick={() => {
+              window.location.href = username !== "" ? "/quiz/" + username : "";
+            }}
+            className="rounded-lg bg-primary-600 px-6 py-3 text-xl text-t3Black transition-colors duration-150 ease-in-out hover:bg-primary-500 active:bg-primary-400 disabled:bg-slate-500"
           >
             enter
-          </Link>
+          </button>
         </form>
       </div>
     </Layout>

@@ -2,18 +2,27 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 /* eslint-disable @typescript-eslint/restrict-plus-operands */
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTimer } from "react-timer-hook";
 import { Layout } from "~/components/layout";
 import { useQuestionContext } from "~/hooks/useQuestionContext";
 import { answerOptions } from "~/lib/constants";
+import { shuffleArray } from "~/lib/helpers";
 
 const Quiz = () => {
   const router = useRouter();
   const { minutes, seconds, isRunning } = useTimer({
     expiryTimestamp: new Date(new Date().getTime() + 1000 * 60 * 1),
   });
-  const { questions } = useQuestionContext();
+  const { questions, setQuestions } = useQuestionContext();
+
+  useEffect(() => {
+    setQuestions((prev) => {
+      shuffleArray(prev);
+      return prev;
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const { username } = router.query;
   const [answers, setAnswers] = useState<string[]>([]);
@@ -117,16 +126,6 @@ const Quiz = () => {
         </div>
 
         <div className="mt-8 flex items-center justify-between">
-          <div className="mr-auto flex min-w-[150px] items-center justify-center rounded-lg border border-primary-600 px-4 pb-2 pt-1.5 text-4xl">
-            <span className="mr-[2px] block">
-              {minutes.toString().padStart(2, "0")}
-            </span>
-            :
-            <span className="ml-[2px] block ">
-              {seconds < 60 ? seconds.toString().padStart(2, "0") : seconds}
-            </span>
-          </div>
-
           {isRunning && (
             <button
               className="rounded-lg bg-primary-600 px-5 py-3 text-xl text-t3Black transition-colors duration-150 ease-in-out hover:bg-primary-500 active:bg-primary-400"
@@ -135,6 +134,16 @@ const Quiz = () => {
               Next
             </button>
           )}
+
+          <div className="ml-auto flex min-w-[150px] items-center justify-center rounded-lg border border-primary-600 px-4 pb-2 pt-1.5 text-4xl">
+            <span className="mr-[2px] block">
+              {minutes.toString().padStart(2, "0")}
+            </span>
+            :
+            <span className="ml-[2px] block ">
+              {seconds < 60 ? seconds.toString().padStart(2, "0") : seconds}
+            </span>
+          </div>
         </div>
       </div>
     </Layout>

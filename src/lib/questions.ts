@@ -13,12 +13,7 @@ const generalITQuestions: Question[] = [
   },
   {
     question: "Welches Betriebssystem wurde von Microsoft entwickelt?",
-    possibleAnswers: [
-      "Android",
-      "Linux",
-      "MacOS",
-      "Windows",
-    ],
+    possibleAnswers: ["Android", "Linux", "MacOS", "Windows"],
     correctAnswer: 3,
   },
   {
@@ -62,13 +57,9 @@ const generalITQuestions: Question[] = [
     correctAnswer: 1,
   },
   {
-    question: "Welche Sprache wird hauptsächlich für die Gestaltung von Webseiten verwendet?",
-    possibleAnswers: [
-      "C++",
-      "Python",
-      "HTML",
-      "Java",
-    ],
+    question:
+      "Welche Sprache wird hauptsächlich für die Gestaltung von Webseiten verwendet?",
+    possibleAnswers: ["C++", "Python", "HTML", "Java"],
     correctAnswer: 2,
   },
   {
@@ -102,7 +93,8 @@ const generalITQuestions: Question[] = [
     correctAnswer: 2,
   },
   {
-    question: "Welches der folgenden Protokolle ermöglicht den sicheren Transfer von Dateien zwischen zwei Computern?",
+    question:
+      "Welches der folgenden Protokolle ermöglicht den sicheren Transfer von Dateien zwischen zwei Computern?",
     possibleAnswers: ["SMTP", "HTTPS", "SFTP", "RPC"],
     correctAnswer: 2,
   },
@@ -122,7 +114,8 @@ const generalITQuestions: Question[] = [
     correctAnswer: 2,
   },
   {
-    question: "Welches dieser Javascript Datentypen wird verwendet um TRUE oder FALSE werte zu speichern?",
+    question:
+      "Welches dieser Javascript Datentypen wird verwendet um TRUE oder FALSE werte zu speichern?",
     possibleAnswers: ["Event", "Boolean", "String", "Object"],
     correctAnswer: 1,
   },
@@ -142,7 +135,8 @@ const generalITQuestions: Question[] = [
     correctAnswer: 3,
   },
   {
-    question: "Welche Technologie wird verwendet, um Kryptowährungstransaktionen aufzuzeichnen?",
+    question:
+      "Welche Technologie wird verwendet, um Kryptowährungstransaktionen aufzuzeichnen?",
     possibleAnswers: ["Mining", "Digital Wallet", "Blockchain", "Token"],
     correctAnswer: 2,
   },
@@ -162,12 +156,14 @@ const generalITQuestions: Question[] = [
     correctAnswer: 1,
   },
   {
-    question: "Welche Datenstruktur folgt dem 'First In, Last Out' (FILO) Prinzip?",
+    question:
+      "Welche Datenstruktur folgt dem 'First In, Last Out' (FILO) Prinzip?",
     possibleAnswers: ["Stack", "Queue", "Linked List", "Tree"],
     correctAnswer: 0,
   },
   {
-    question: "Welches der folgenden HTML-Tags wird verwendet, um einen Hyperlink zu definieren?",
+    question:
+      "Welches der folgenden HTML-Tags wird verwendet, um einen Hyperlink zu definieren?",
     possibleAnswers: ["<a>", "<i>", "<d>", "<s>"],
     correctAnswer: 0,
   },
@@ -187,7 +183,8 @@ const generalITQuestions: Question[] = [
     correctAnswer: 2,
   },
   {
-    question: "Was passiert nach der Ausführung von `sudo rm -rf --no-preserve-root /`?",
+    question:
+      "Was passiert nach der Ausführung von `sudo rm -rf --no-preserve-root /`?",
     possibleAnswers: [
       "Dein Computer überhitzt",
       "Alle Lichter gehen aus",
@@ -197,17 +194,20 @@ const generalITQuestions: Question[] = [
     correctAnswer: 2,
   },
   {
-    question: "Was wird verwendet, um einer Webseite Interaktivität hinzuzufügen?",
+    question:
+      "Was wird verwendet, um einer Webseite Interaktivität hinzuzufügen?",
     possibleAnswers: ["HTML", "CSS", "JavaScript", "Typescript"],
     correctAnswer: 2,
   },
   {
-    question: "Welches HTML-Tag wird verwendet, um einen Zeilenumbruch zu erstellen?",
+    question:
+      "Welches HTML-Tag wird verwendet, um einen Zeilenumbruch zu erstellen?",
     possibleAnswers: ["<hr>", "<lb>", "<ta>", "<br>"],
     correctAnswer: 3,
   },
   {
-    question: "Welcher der folgenden Werte ist KEIN gültiger Wert für die CSS-Eigenschaft 'display'?",
+    question:
+      "Welcher der folgenden Werte ist KEIN gültiger Wert für die CSS-Eigenschaft 'display'?",
     possibleAnswers: ["none", "inline-block", "vertical", "flex"],
     correctAnswer: 2,
   },
@@ -237,7 +237,8 @@ const generalITQuestions: Question[] = [
     correctAnswer: 0,
   },
   {
-    question: "Was ist der Begriff für eine Art von Malware, die sich selbst verbreitet, indem sie andere Programme infiziert?",
+    question:
+      "Was ist der Begriff für eine Art von Malware, die sich selbst verbreitet, indem sie andere Programme infiziert?",
     possibleAnswers: ["Virus", "Wurm", "Trojaner", "Spyware"],
     correctAnswer: 1,
   },
@@ -247,9 +248,10 @@ const generalITQuestions: Question[] = [
     correctAnswer: 0,
   },
   {
-    question: "Welches ist das Akronym das den Prozess der Umwandlung von Sprache in Text beschreibt?",
+    question:
+      "Welches ist das Akronym das den Prozess der Umwandlung von Sprache in Text beschreibt?",
     possibleAnswers: ["OCR", "ASR", "NLP", "KI"],
-    correctAnswer: 1,
+    correctAnswer: 2,
   },
   {
     question: "Welches Unternehmen hat einen KI-Assistenten namens Cortana?",
@@ -261,24 +263,16 @@ const generalITQuestions: Question[] = [
     possibleAnswers: ["Apple", "Microsoft", "Amazon", "Samsung"],
     correctAnswer: 3,
   },
-   {
-    question: "Welches Gerät wird verwendet, um die Netzwerkverbindungen zu verwalten?",
-    possibleAnswers: [
-      "Router",
-      "Monitor",
-      "Tastatur",
-      "Festplatte",
-    ],
+  {
+    question:
+      "Welches Gerät wird verwendet, um die Netzwerkverbindungen zu verwalten?",
+    possibleAnswers: ["Router", "Monitor", "Tastatur", "Festplatte"],
     correctAnswer: 0,
   },
   {
-    question: "Welche Programmiersprache wird vor allem für die Entwicklung von iOS-Apps verwendet?",
-    possibleAnswers: [
-      "Java",
-      "Swift",
-      "Python",
-      "Kotlin",
-    ],
+    question:
+      "Welche Programmiersprache wird vor allem für die Entwicklung von iOS-Apps verwendet?",
+    possibleAnswers: ["Java", "Swift", "Python", "Kotlin"],
     correctAnswer: 1,
   },
   {
@@ -393,33 +387,37 @@ const leanCodersQuestions: Question[] = [
   },
   {
     question: "Welches dieser Unternehmen existiert nicht?",
-    possibleAnswers: ["LEAN-CODERS", "LEAN-CODERS CH", "LEAN-LABS", "LEAN-HIVE"],
+    possibleAnswers: [
+      "LEAN-CODERS",
+      "LEAN-CODERS CH",
+      "LEAN-LABS",
+      "LEAN-HIVE",
+    ],
     correctAnswer: 2,
   },
   {
-    question: "Wie viele Easter eggs sind auf der Website lean-coders.at versteckt?",
+    question:
+      "Wie viele Easter eggs sind auf der Website lean-coders.at versteckt?",
     possibleAnswers: ["10", "Easter eggs?", "0", "5"],
     correctAnswer: 3,
   },
   {
-    question: "Welcher dieser Begriffe steht NICHT auf einem LEAN-CODERS Sticker?",
+    question:
+      "Welcher dieser Begriffe steht NICHT auf einem LEAN-CODERS Sticker?",
     possibleAnswers: [
       "Increasing bugs since 2015",
       "Die einzige Maske, die ich verwende, ist 255.255.255.255",
-      "Eliminate bade code",
+      "Eliminate bad code",
       "Make code great again",
     ],
     correctAnswer: 1,
   },
   {
-    question: "In welchem dieser Länder befindet sich das zweite Büro von LEAN-CODERS?",
+    question:
+      "In welchem dieser Länder befindet sich das zweite Büro von LEAN-CODERS?",
     possibleAnswers: ["Schweden", "Deutschland", "Niederlande", "Schweiz"],
     correctAnswer: 3,
   },
 ];
 
-
-export const questions = [
-  ...generalITQuestions,
-  ...leanCodersQuestions,
-];
+export const questions = [...generalITQuestions, ...leanCodersQuestions];
